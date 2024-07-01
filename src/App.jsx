@@ -23,6 +23,9 @@ function App() {
       if (showStockedOnly && !product.stocked) {
           return false        
       }
+      if (search && !product.name.includes(search)) {
+        return false
+      }
 
       return true
     }
